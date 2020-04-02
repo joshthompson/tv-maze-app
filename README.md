@@ -1,4 +1,4 @@
-<img src="readme/preview.png" width="200" />
+<img src="assets/preview.png" width="200" align="right" />
 
 # TV Tracker
 
