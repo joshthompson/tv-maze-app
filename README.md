@@ -5,6 +5,8 @@
 ## Project setup
 Once you have cloned or downloaded the project use terminal to navigate into the project.
 
+The project has been tested in Node.js version 12.16.1
+
 ### To install, run:
 ```
 npm install
