@@ -47,6 +47,11 @@
 		padding: 0.5rem;
 		display: flex;
 
+		input {
+			appearance: none;
+			-webkit-appearance: none;
+		}
+
 		input[type="search"] {
 			flex-grow: 1;
 			font-size: 1rem;

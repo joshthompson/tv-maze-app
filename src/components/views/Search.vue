@@ -32,7 +32,11 @@
 				this.loading = true
 				this.$store.commit('setLastSearch', this.term)
 				const results = await tvmaze.search(this.term)
-				this.shows = results.map((result) => result.show)
+
+				this.shows = this.term.trim().length > 0
+					? results.map((result) => result.show)
+					: []
+
 			} catch (err) {
 				this.shows = []
 				this.error = `There was an error when searching TV Maze for '${this.term}'`
