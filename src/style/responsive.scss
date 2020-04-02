@@ -1,0 +1,24 @@
+$max-page-width: 1200px; // Will not render most components above 1200px
+$min-page-width: 320px; // Stops resizing at 320px
+
+// Breakpoints (They need to be pretty big for score display)
+$medium-width: 1050px; 
+$small-width: 650px;
+
+@mixin medium {
+  @media (max-width: #{$medium-width}) {
+		@content;
+	}
+}
+
+@mixin small {
+  @media (max-width: #{$small-width}) {
+		@content;
+	}
+}
+
+.hide-small {
+	@include small {
+		display: none;
+	}
+}

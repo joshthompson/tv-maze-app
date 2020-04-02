@@ -1,0 +1,22 @@
+// Base colors
+$black: #2C3E50;
+$black-light: #35485C;
+$white: #FFFFFF;
+$grey: #E4E4E4;
+$grey-dark: #DDDDDD;
+$grey-light: #F4F4F4;
+$red: #CC0000;
+$yellow: #F7DC10;
+
+// App colors
+$main-color: $black;
+$main-color-light: $black-light;
+$main-color-contrast: $white;
+$error-color: $red;
+$error-color-contrast: $white;
+
+// Measurements
+$radius: 0.5rem;
+$radius-small: 0.5rem;
+$radius-smaller: 0.25rem;
+$panel-min-height: 300px;
