@@ -26,7 +26,7 @@
 			<p>We search through the data provided by <a class="link" href="https://www.tvmaze.com/" target="_blank">tvmaze.com</a> to fetch the details and episodes of your favourite shows.</p>
 
 			<h3>Who made this?</h3>
-			<p>This was made by <a class="link" href="https://joshthompson.github.io" target="_blank">Josh Thompson</a> as part of a job application for <a class="link" href="http://happysocks.com/" target="_blank">Happy Socks</a>.</p>
+			<p>This was made by <a class="link" href="https://joshthompson.github.io" target="_blank">Josh Thompson</a>.</p>
 		</Card>
 	</Container>
 </template>
