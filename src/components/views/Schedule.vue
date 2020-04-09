@@ -27,12 +27,19 @@
 		public async created() {
 			try {
 				this.loading = true
-				let shows = await Promise.all(this.favourites.map((id) => tvmaze.nextEpisode(id)))
-				shows = shows.filter((show) => show._embedded)
-				this.schedule = shows.map((show) => ({
-					show: show,
-					episode: show._embedded.nextepisode
+
+				// Load all episodes for the favourites
+				await Promise.all(this.favourites.map(async (id) => {
+					const show = await tvmaze.showWithEpisodes(id)
+					const scheduled: ScheduleContainer[] = show._embedded.episodes.filter((episode) => {
+						const airDate = new Date(episode.airstamp)
+						return airDate.getTime() > Date.now()
+					}).map((episode) => {
+						return { show, episode }
+					})
+					this.schedule.push(...scheduled)
 				}))
+
 				// Sort schedule
 				this.schedule.sort((a, b) => a.episode.airstamp > b.episode.airstamp ? 1 : -1)
 			} catch (err) {

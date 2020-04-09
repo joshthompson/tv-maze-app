@@ -16,6 +16,11 @@ export async function showFull(showId: number | string) {
 	return await xhr.get(`${baseUrl}/shows/${showId}${embed}`) as Ishow
 }
 
+export async function showWithEpisodes(showId: number | string) {
+	const embed = '?embed=episodes'
+	return await xhr.get(`${baseUrl}/shows/${showId}${embed}`) as Ishow
+}
+
 export async function nextEpisode(showId: number | string) {
 	const embed = '?embed[]=nextepisode'
 	return await xhr.get(`${baseUrl}/shows/${showId}${embed}`) as Ishow
@@ -33,6 +38,7 @@ export default {
 	search,
 	show,
 	showFull,
+	showWithEpisodes,
 	nextEpisode,
 	episodes,
 	cast
